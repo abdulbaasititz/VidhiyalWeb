@@ -1,0 +1,61 @@
+<header class="topNav border-b md:flex md:items-center md:justify-between  shadow-lg hidden sm:hidden fixed w-full bg-white h-16 ">
+  
+    <!-- Logo text or image -->
+    <div class="flex items-center justify-between mb-4 md:mb-0 m-b-1">
+      <!-- <a href="" class="">
+        <img src="/assets/img/logo-light.png" alt="" class="t-logo img-fluid bg-gray-800 px-3 py-3  " height="60px" width="208px">
+        <img src="/assets/img/small-logo.png" alt="" class=" bg-gray-800 hidden" height="50px" width="50px">
+      </a> -->
+      <a class="text-black">
+        <mat-icon (click)="showMenu()" class="px-4 menu-left">menu</mat-icon>
+      </a>
+      <form class="mb-4  md:mb-0 mx-5">
+        <label class="hidden" for="search-form">Search</label>
+        <input class="border-none bg-gray-100 rounded-2xl w-full" placeholder="Search" type="text">
+        <button class="hidden">Submit</button>
+      </form>
+    </div>
+    
+    <!-- Global navigation -->
+    <nav>
+      <ul class="list-reset hidden md:flex md:items-center">
+        <li class="md:ml-4">
+          <a class="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0">
+          <mat-icon class="screen hover:cursor-pointer" *ngIf="!isFullScreen" (click)="openFullscreen()">fullscreen</mat-icon>
+            <mat-icon class="screen hover:cursor-pointer" *ngIf="isFullScreen" (click)="closeFullscreen()">fullscreen_exit</mat-icon>
+          </a>
+        </li>
+        <li class="md:ml-4 hidden">
+          <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
+          <mat-icon>notifications</mat-icon>
+          </a>
+        </li>
+        <li class="md:ml-4 pr-4">
+          <!-- <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
+            <mat-icon>account_circle</mat-icon>
+          </a> -->
+          <div class="relative inline-block text-left">
+            <div  (click)="showLog()">
+       <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black  cursor-pointer md:border-none md:p-0">
+            <mat-icon>account_circle</mat-icon>
+          </a>
+            </div>
+
+            <div class="logmenus origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden">
+              <div class="py-1" role="none">
+                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" >Account settings</a>
+                <form method="POST" action="#" >
+                  <button type="submit" (click)="logOutUser()" class="block text-black w-full text-left px-4 py-2 text-sm hover:bg-gray-400" >
+                    Sign out
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- END Global navigation -->
+  
+  </header>

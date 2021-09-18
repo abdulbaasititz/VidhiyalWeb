@@ -1,0 +1,8 @@
+.sub-menu{
+    position: absolute;
+    bottom: 60px;
+    background: #1f2937;
+}
+.show-menu:hover .sub-menu{
+    display: block !important;
+}

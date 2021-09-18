@@ -1,0 +1,142 @@
+<app-topbar></app-topbar>
+<app-sidenav></app-sidenav>
+<app-mobilemenu></app-mobilemenu>
+<div class="main-content">
+    <div class="page-content">
+        <div>
+            <p class=" font-medium pb-2 ">Customer Details</p>
+        </div>
+        <form [formGroup]="crateCustomer" (ngSubmit)="submitCustomer()">
+            <div class="shadow-lg p-10 bg-white rounded-md ">
+                <div class="grid lg:grid-cols-3">
+                    <div class="px-2">
+                        <mat-label for="" class="font-medium">Member ID</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3 border-gray-400"  required
+                            placeholder="Member ID" formControlName="memberId">
+                        <p *ngIf="submitted && crateCustomer.controls.memberId.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter Member ID</p>
+                    </div>
+                    <div class="px-2">
+                        <mat-label for="" class="font-medium">Intial Amount</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3 border-gray-400"  required
+                            placeholder="Intial Amount" formControlName="intialAmount">
+                        <p *ngIf="submitted && crateCustomer.controls.intialAmount.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute">Enter Intial Amount</p>
+                    </div>
+                    <div class="px-2">
+                        <mat-label class="font-medium">Payment Date</mat-label>
+
+                        <input  [matDatepicker]="picker3"
+                            class="border-1 border-gray-400 mt-3 w-full p-2 rounded-md focus:outline-none  focus:border-blue-600 focus:border-2"
+                            placeholder="Enter Entry date" formControlName="paymentDate">
+
+                        <mat-datepicker-toggle matSuffix [for]="picker3" class="cal-pos"></mat-datepicker-toggle>
+                        <mat-datepicker #picker3></mat-datepicker>
+                        <p *ngIf="submitted && crateCustomer.controls.paymentDate.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter Payment date</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="shadow-lg p-10 mt-4 bg-white rounded-md">
+                <div class="grid lg:grid-cols-3 gap-4">
+                    <div>
+                        <mat-label for="" class="font-medium">Member Name</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3 border-gray-400"  required
+                            placeholder="Member Name" formControlName="memberName">
+                        <p *ngIf="submitted && crateCustomer.controls.memberName.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter Member name</p>
+                    </div>
+                    <div>
+
+                        <mat-label for="" class="font-medium">Father Name</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3 border-gray-400"  required
+                            placeholder="Father Name" formControlName="fatherName">
+                        <p *ngIf="submitted && crateCustomer.controls.fatherName.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter Father name</p>
+                    </div>
+                    <div>
+                        <mat-label class="font-medium">Mobile Number</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3 border-gray-400"  required
+                        placeholder="Mobile Number" formControlName="mobileNumber">
+                    <p *ngIf="submitted && crateCustomer.controls.mobileNumber.errors?.required"
+                        class="text-red-500 text-xs italic m-0 absolute"> Mobile Number</p>
+                    </div>
+                    <div>
+                        <mat-label class="font-medium">Email</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3 border-gray-400"  required
+                        placeholder="Email" formControlName="email">
+                        <p *ngIf="submitted && crateCustomer.controls.email.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter Email</p>
+                    </div>
+                    <div>
+
+                        <mat-label for="" class="font-medium">Aadhar Number</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3"  required
+                            placeholder="aadharNumber" formControlName="aadharNumber">
+                        <p *ngIf="submitted && crateCustomer.controls.aadharNumber.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter Aadhar Number</p>
+                    </div>
+                    <div>
+                        <mat-label class="font-medium">Address</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3 border-gray-400"  required
+                        placeholder="Address" formControlName="address">
+                        <p *ngIf="submitted && crateCustomer.controls.address.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter Address</p>
+                    </div>
+                    <div>
+                        <mat-label for="" class="font-medium">City</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3"  required
+                            placeholder="City" formControlName="city">
+                        <p *ngIf="submitted && crateCustomer.controls.city.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter City</p>
+                    </div>
+                    <div>
+                        <mat-label for="" class="font-medium">Bank Account Number</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3"  required
+                            placeholder="Bank Account Number" formControlName="bankAccountNumber">
+                        <p *ngIf="submitted && crateCustomer.controls.bankAccountNumber.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter City</p>
+                    </div>
+                    <div>
+                        <mat-label for="" class="font-medium">IFSC code</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3"  required
+                            placeholder="Bank Account Number" formControlName="ifscCode">
+                        <p *ngIf="submitted && crateCustomer.controls.ifscCode.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Enter IFSC code</p>
+                    </div>
+                    <div>
+                        <mat-label for="" class="font-medium">Bank Branch</mat-label>
+                        <input type="text" class="in-padd rounded-md p-2 w-full mt-3"  required
+                            placeholder="Bank Account Number" formControlName="bankBranch">
+                        <p *ngIf="submitted && crateCustomer.controls.bankBranch.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> EnterBank Branch</p>
+                    </div>
+                    <div>
+                        <mat-label for="" class="font-medium">Subscription Type</mat-label>
+                      
+                            <select class="in-padd rounded-md p-2 w-full mt-3"  
+                            formControlName="subscriptionType">
+                            <option value=""> - Select Subscription Type - </option>
+                            <option value="3">3 Months</option>
+                            <option value="6">6 Months</option>
+                        </select>
+                        <p *ngIf="submitted && crateCustomer.controls.subscriptionType.errors?.required"
+                            class="text-red-500 text-xs italic m-0 absolute"> Select Subscription Type</p>
+                    </div>
+                    <div>
+                        &nbsp;
+                    </div>
+
+                </div>
+                <div class=" mt-5 ">
+                    <button class=" bg-blue-600 text-white  py-3 px-4 rounded-md">Submit</button>
+                    <button type='button' class="bg-gray-600 text-white py-3 px-4 rounded-md mx-4"
+                        (click)="resetForm()">Cancel</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>

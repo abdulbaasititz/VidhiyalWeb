@@ -1,0 +1,32 @@
+<div class="fixed top-0 bg-white shadow-md  w-full h-11 block  sm:block md:hidden m-menu">
+<div class="text-center relative top-2 ">
+    <img src="/assets/img/logo.png" alt="" class="logo img-fluid  mx-auto mt-0 " height="30px" width="100px">
+</div>
+</div>
+<nav class="fixed bottom-0 inset-x-0 bg-gray-800 flex justify-between text-sm text-white md:hidden z-10 ">
+    <a [routerLink]="['/dashboard']" class="w-full block py-1 px-1 text-center hover:bg-blue-200 hover:text-black transition duration-300">
+       <mat-icon class="block w-6 h-6 mb-1 mx-auto sm:block">home</mat-icon>    Home
+      </a>
+    
+      <a  class="w-full block py-1 px-1 text-center hover:bg-blue-200 hover:text-black show-menu">
+          <mat-icon class="block w-6 h-6 mb-1 mx-auto ">medication</mat-icon> Patient
+          <ul class="sub-menu hidden  rounded-sm ">
+            <li class="py-2 text-white hover:bg-blue-200 hover:text-black"><a [routerLink]="['/create-customer']" > Create Customer</a></li>
+            <li class="py-2 text-white hover:bg-blue-200 hover:text-black"><a [routerLink]="['/view-customer']"> View Customer</a></li>
+        </ul>
+      </a>
+    
+      <a [routerLink]="['/profile']"class="w-full block py-1 px-3 text-center hover:bg-blue-200 hover:text-black">
+          <mat-icon class="block w-6 h-6 mb-1 mx-auto ">account_circle</mat-icon>  Profile
+          <ul class="sub-menu  hidden rounded-sm" style="right: 6.7rem !important;">
+            <li><a href="#">Logout</a></li>
+        </ul>
+      </a>
+    
+      <a [routerLink]="['/report']" class="w-full block py-1 px-1 text-center hover:bg-blue-200 hover:text-black">
+          <mat-icon class="block w-6 h-6 mb-1 mx-auto ">settings</mat-icon>  Settings
+          <ul class="sub-menu hidden right-1  rounded-sm ">
+              <li><a href="#"> Logout</a></li>
+          </ul>
+      </a>    
+</nav>

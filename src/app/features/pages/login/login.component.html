@@ -1,0 +1,39 @@
+<div class="flex h-screen bg-image" >
+    <div class="m-auto">
+     <div class=" bg-white shadow-lg rounded-md" style="width: 500px;height: 500px;">
+         <div class="text-center p-12 ">
+          <img src="/assets/img/logo.png" alt="logo" class="object-contain h-16 w-16 mx-auto my-0 ">
+           <h2>VIDIYAL FINANCIAL MANAGEMENT</h2>
+           <small>CREATING WEALTH</small>
+
+            <form [formGroup]="loginForm" (ngSubmit)="submit_login()" class=" w-full my-0 mx-auto">
+                <div class="p-1">
+                    <input type="text" class="in-padd  py-2 w-full my-2 cust-border  focus:outline-none "  required  placeholder="Email" formControlName="userId">
+                    <p *ngIf="submitted && loginForm.controls.userId.errors?.required"  class="text-red-500 text-xs italic m-0 absolute"> enter userId</p>
+                </div>
+                <div class="p-1">
+                    <input type="password" class="in-padd cust-border py-2 my-2 w-full  focus:outline-none" placeholder="password" formControlName="password" >
+                    <p *ngIf="submitted && loginForm.controls.password.errors?.required"  class="text-red-500 text-xs italic m-0 absolute"> enter password</p>
+
+                </div>
+              
+                <div class="ml-2 pt-3 flex justify-between ">
+                    <div class="flex items-center ">
+                        <input type="checkbox" class="b-none outline-none" name="remember" id="remember" >
+                        <label for="remember" class="pl-2">Remember me</label>
+                    </div>
+                  
+                    <a href="#" class="text-right">Forgot Password?</a>
+                </div>
+                <div class="p-5 text-center ">
+                    <button class=" text-white bg-yellow-400 px-10 rounded-md py-3 hover:cursor-pointer hover:bg-black hover:text-white ">Log in</button>
+                </div>
+                <div>
+                    <p>Terms of use. Privacy policy</p>
+                </div>
+            </form>
+         </div>
+      
+     </div>
+    </div>
+  </div>

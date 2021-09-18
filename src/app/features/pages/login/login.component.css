@@ -1,0 +1,20 @@
+.bg-image{
+    width:100%;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/assets/img/login-banner.png') no-repeat;
+    background-size:cover;
+    background-position: center center
+}
+.cust-border{
+    border:none;
+    border-bottom:  1px solid #333;
+    outline: none !important;
+}
+input:focus{
+    border-width:0px;
+    border:none;
+    outline: none;
+    outline-width: 0;
+}
+*:focus {
+    outline: none;
+}

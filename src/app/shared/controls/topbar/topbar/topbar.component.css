@@ -1,0 +1,21 @@
+.pl-6{
+    padding: 6px 0px;
+}
+.text-opacity-100{
+    opacity: 0 !important;
+}
+.small-nav{
+    width: 80px;
+}
+.logo{
+    padding: 20px 50px 20px 40px !important;
+}
+.m-b-1{
+margin-bottom: -1px !important;
+}
+#logBtn:hover .logmenus{
+    display: block !important;
+}
+.menu-left{
+    margin-left: 210px;
+}

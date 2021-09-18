@@ -1,0 +1,166 @@
+<div class="topNav fixed min-h-screen md:flex  ">
+  <!-- sidebar -->
+  <div
+    class="sidebar md:w-52 sm:w-5 bg-gray-800 text-blue-100  pb-7 px-2 absolute inset-y-0 left-0 transform hidden md:relative sm:hidden md:block">
+
+    <!-- nav -->
+    <nav>
+
+      <a href="">
+        <img src="/assets/img/logo.png" alt="" class="logo img-fluid bg-gray-800 p-3 mx-auto my-0 " height="50px" width="100px">
+        <img src="/assets/img/logo.png" alt="" class="small-logo bg-gray-800 hidden" height="50px" width="50px">
+      </a>
+      <ul class=" pt-2 pl-1 ">
+
+        <li class="py-4 pl-1  cursor-pointer rounded-lg nav-text text-sm ">
+        <a [routerLink]="['/dashboard']" class="  hover:opacity-50 text-white">
+            <mat-icon class=" align-bottom ">dashboard</mat-icon>
+            <span
+              class=" pl-1 transition  hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800">Dashboard</span>
+            </a>
+          </li>
+
+        <li class="nav-text">
+          <div class="group" tabindex="1">
+            <div class="group flex justify-between  py-2 items-center transition cursor-pointer relative">
+
+              <div
+                class="transition  text-sm  hover:opacity-50 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800">
+                <mat-icon class="align-bottom">medication</mat-icon> <span class="nav-text pl-1">Customer Details</span>
+              </div>
+              <div
+                class="nav-text h-8 w-8 items-center inline-flex justify-center rotate-180 transform transition group-focus:-rotate-90 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <svg fill="#fff" height="100px" width="100px" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 847 847" x="0px" y="0px">
+                  <g>
+                    <polygon points="670,584 423,263 176,584 "></polygon>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="group-focus:max-h-screen focus-within:max-h-screen max-h-0 px-4 overflow-hidden">
+              <ul>
+                <li class="p-2">
+
+                  <a [routerLink]="['/create-customer']" class="text-sm   hover:opacity-50 text-white pl-2">Create Customers</a>
+                </li>
+                <li class="p-2">
+
+                  <a [routerLink]="['/view-customer']" class="text-sm   hover:opacity-50 text-white pl-2">View Customers</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-text">
+          <div class="group" tabindex="1">
+            <div class="group flex justify-between  py-2 items-center transition cursor-pointer relative">
+
+              <div
+                class="transition text-sm  hover:opacity-50 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800">
+                <mat-icon class="align-bottom">medication</mat-icon> <span class="nav-text pl-1">Suscription Details</span>
+              </div>
+              <div
+                class="nav-text h-8 w-8 items-center inline-flex justify-center rotate-180 transform transition group-focus:-rotate-90 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <svg fill="#fff" height="100px" width="100px" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 847 847" x="0px" y="0px">
+                  <g>
+                    <polygon points="670,584 423,263 176,584 "></polygon>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="group-focus:max-h-screen focus-within:max-h-screen max-h-0 px-4 overflow-hidden">
+              <ul>
+                <li class="p-2">
+
+                  <a [routerLink]="['/create-subscription']" class="text-sm  hover:opacity-50 text-white pl-2">Create Subscription</a>
+                </li>
+                <li class="p-2">
+
+                  <a [routerLink]="['/view-subscription']" class="text-sm  hover:opacity-50 text-white pl-2">View Subscription</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="py-4  cursor-pointer nav-text">
+        <a [routerLink]="['/report']" class=" hover:opacity-50 text-white ">
+            <mat-icon class=" align-bottom ">medication</mat-icon>
+            <span
+              class="nav-text text-sm ml-1 transition  hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800">Help Center
+              </span>
+            </a>
+          </li>
+        <li class="nav-text">
+          <div class="group" tabindex="1">
+            <div class="group flex justify-between py-2 items-center transition cursor-pointer relative">
+
+              <div
+                class="transition text-sm  hover:opacity-50 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800">
+                <mat-icon class="align-bottom">settings</mat-icon> <span class="pl-2 nav-text">Setting</span>
+              </div>
+              <!-- <div
+                class="nav-text h-8 w-8  items-center inline-flex justify-center rotate-180 transform transition group-focus:-rotate-90 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+                <svg fill="#fff" height="100px" width="100px" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 847 847" x="0px" y="0px">
+                  <g>
+                    <polygon points="670,584 423,263 176,584 "></polygon>
+                  </g>
+                </svg>
+              </div> -->
+            </div>
+            <div class="group-focus:max-h-screen focus-within:max-h-screen max-h-0 px-4 overflow-hidden">
+              <!-- <ul>
+                <li>
+                  <a [routerLink]="['/profile']" class="text-white pl-6 hover:opacity-50 py-2">Profile</a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </li>
+        <li class="v-icon py-2 hidden">
+          <div class="tooltip">
+            <mat-icon>dashboard</mat-icon>
+            <span class="tooltiptext"> <span class="text-sm"></span>
+              <ul>
+                <li><a [routerLink]="['/dashboard']" class="text-xs">Dashboard</a></li>
+
+              </ul>
+            </span>
+          </div>
+        </li>
+        <li class="v-icon py-2 hidden">
+          <div class="tooltip">
+            <mat-icon>medication</mat-icon>
+            <span class="tooltiptext"> <span class="text-xs underline"> Customer Details</span>
+              <ul>
+                <li><a [routerLink]="['/create-customer']" class="text-xs">Create Customer</a></li>
+                <li><a [routerLink]="['/view-customer']" class=" text-xs ">View Customer</a></li>
+              </ul>
+            </span>
+          </div>
+        </li>
+        <li class="v-icon py-2  hidden">
+          <div class="tooltip">
+            <mat-icon>medication</mat-icon>
+            <span class="tooltiptext"> <span class="text-xs underline ">Subscription Details</span>
+              <ul>
+                <li><a [routerLink]="['/create-subscription']" class="text-xs">Create Subscription</a></li>
+                <li><a [routerLink]="['/view-subscription']" class="text-xs">view Subscription</a></li>
+
+              </ul>
+            </span>
+          </div>
+        </li>
+        <li class="v-icon py-2 hidden">
+          <div class="tooltip">
+            <mat-icon>settings</mat-icon>
+            <span class="tooltiptext"> <span class="text-sm">Setting</span>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
